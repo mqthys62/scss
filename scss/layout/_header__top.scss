@@ -1,0 +1,32 @@
+.header__top {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    height: 20em;
+    margin: 0;
+    justify-content: center;
+    text-align: center;
+    background-image: url(../fond.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+        & h1 {
+        width: 60%;
+        text-align: center;
+        align-self: center;
+        font-size: 1em;
+        font-weight: bold;
+        color: white;
+        padding-top: 50px;
+    }
+        &__form{
+            padding: 10px 0px 50px 0px;
+            
+            &__input {
+                padding: 10px;
+                border: transparent;
+                border-radius: 3px;
+            }
+        }
+}

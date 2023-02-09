@@ -5,108 +5,129 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
 
 </head>
 
 <body>
-    <nav class="navbar__signin">
-        <a href="logo">Logo</a>
-        <a href="SignIn" id="signIn">SignIn</a>
+    <nav class="navbar__top">
+        <a class="navbar__top__logo" href="logo">Logo placeholder</a>
+        <a class="navbar__top__signin" href="SignIn" id="signIn">SignIn</a>
     </nav>
 
     <header class="header__top">
         <h1>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </h1>
-        <form class="form__top" action="#" method="post">
+        <form class="header__top__form" action="#" method="post">
             <div>
-                <input type="email" name="emailInput" id="emailInput" placeholder="Email Adress">
-                <button type="submit">Submit</button>
+                <input class="header__top__form__input" type="email" name="emailInput" id="emailInput"
+                    placeholder="Email Adress">
+                <button class="button--press" type="submit">Submit</button>
             </div>
         </form>
     </header>
     <main>
         <div class="main__section">
-            <article class="article__first">
+            <article class="main__section__article__first">
+                <i class='bx bxs-user-pin'></i>
                 <h2>
                     Lorem Ipsum
                 </h2>
-                <img src="icon.png" alt="icon">
-
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, ea dolores? Qui accusamus
+                    Lorem ipsum dolor sit amet consectetur adipisicing
                     libero
-                    ipsa blanditiis quas beatae dolorum necessitatibus sit temporibus, dolore fugiat quam eveniet in
+                    ipsa blanditiis quas beatae dolorum necessitatibus
                     labore id
                     eius!
                 </p>
             </article>
 
-            <article class="article__first">
+            <article class="main__section__article__first">
+                <i class='bx bxs-user-pin'></i>
                 <h2>
                     Lorem Ipsum
                 </h2>
-                <img src="icon1.png" alt="icon1">
-
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, ea dolores? Qui accusamus
+                    Lorem ipsum dolor sit amet consectetur adipisicing
                     libero
-                    ipsa blanditiis quas beatae dolorum necessitatibus sit temporibus, dolore fugiat quam eveniet in
+                    ipsa blanditiis quas beatae dolorum necessitatibus
                     labore id
                     eius!
                 </p>
             </article>
 
-            <article class="article__first">
+            <article class="main__section__article__first">
+                <i class='bx bxs-user-pin'></i>
                 <h2>
                     Lorem Ipsum
                 </h2>
-                <img src="icon2.png" alt="icon2">
-
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, ea dolores? Qui accusamus
+                    Lorem ipsum dolor sit amet consectetur adipisicing
                     libero
-                    ipsa blanditiis quas beatae dolorum necessitatibus sit temporibus, dolore fugiat quam eveniet in
+                    ipsa blanditiis quas beatae dolorum necessitatibus
                     labore id
                     eius!
                 </p>
             </article>
         </div>
 
+        <hr>
         <section class="section__bottom">
             <h2>
                 Contact us
             </h2>
-
-            <form class="form__bottom" action="#" method="post">
-                <div>
-                    <input type="text" name="firstNameInput" id="firstNameInput" placeholder="Firstname">
-                    <input type="text" name="lastNameInput" id="lastNameInput" placeholder="Lastname">
-                </div>
-                <div>
-                    <input type="email" name="emailFormInput" id="emailFormInput" placeholder="Email Adress">
-                    <input type="tel" name="telInput" id="telInput" placeholder="Phone Number">
-                </div>
-                <div>
-                    <textarea name="textAreaInput" id="textAreaInput" cols="30" rows="10"
+            <div class="section__bottom__background">
+                <form class="section__bottom__form" id="contactForm" method="post">
+                    <div class="section__bottom__form__input__container">
+                        <div class="section__bottom__form__errors">
+                            <input class="section__bottom__form__text" type="text" name="firstNameInput"
+                                id="firstNameInput" placeholder="Firstname">
+                            <label for="firstNameInput" id="firstNameError" class="error-message">Veuillez renseigner un
+                                prénom valide</label>
+                        </div>
+                        <div class="section__bottom__form__errors">
+                            <input class="section__bottom__form__text" type="text" name="lastNameInput"
+                                id="lastNameInput" placeholder="Lastname">
+                            <label for="lastNameInput" id="lastNameError" class="error-message">Veuillez renseigner un
+                                nom
+                                valide</label>
+                        </div>
+                    </div>
+                    <div class="section__bottom__form__input__container">
+                        <div class="section__bottom__form__errors">
+                            <input class="section__bottom__form__text" type="email" name="emailFormInput"
+                                id="emailFormInput" placeholder="Email Adress">
+                            <label for="emailFormInput" id="emailError" class="error-message">Veuillez renseigner un
+                                email
+                                valide</label>
+                        </div>
+                        <div class="section__bottom__form__errors">
+                            <input class="section__bottom__form__text" type="tel" name="telInput" id="telInput"
+                                placeholder="Phone Number">
+                            <label for="telInput" id="telError" class="error-message">Veuillez renseigner un numéro
+                                valide</label>
+                        </div>
+                    </div>
+                    <textarea class="section__bottom__form__textarea" name="textAreaInput" id="textAreaInput"
                         placeholder="Type your message"></textarea>
-                </div>
-                <div>
-                    <button type="submit">Submit</button>
-                </div>
-            </form>
+                    <label for="textAreaInput" id="textAreaError" class="error-message">Veuillez renseigner quelque
+                        chose </label>
+                    <button class="button--press" type="submit">Submit</button>
+                </form>
+            </div>
         </section>
-        <footer>
-            <nav class="navbar__bottom">
+        <footer class="footer">
+            <div class="footer__bottom">
                 <a href="About" id="aboutUs">AboutUs</a>
                 <a href="Contact" id="contactUs">ContactUs</a>
                 <a href="termOfUse" id="termOfUse">Term of use</a>
                 <a href="privacyPolicy" id="privacyPolicy">Privacy Policy</a>
-            </nav>
-
+            </div>
         </footer>
+        <script src="app.js"></script>
 </body>
 
 </html>

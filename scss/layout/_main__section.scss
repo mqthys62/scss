@@ -1,0 +1,49 @@
+.main__section {
+    text-align: center;
+    margin: auto;
+    @media screen and (min-width:769px) {
+        display: flex;
+        flex-wrap: wrap;
+     }
+     @media screen and (min-width:1024px) {
+         flex-wrap: nowrap;
+         display: flex;
+         }
+     & article {
+         @media screen and (min-width:769px) {
+             align-items: center;
+             margin: auto;
+             width: 30%;
+             }
+     }
+
+     & article h2 {
+        font-size: 18px;
+        @media screen and (min-width:769px) {
+            font-size: 22px;
+        }
+        @media screen and (min-width:1024px) {
+            font-size: 26px;
+        }
+     }
+
+     & article p {
+        margin: 10px;
+     }
+
+     & article i {
+        font-size: 50px;
+        margin-top: 10px;
+        color: #0D6EFD;
+
+        @media scren and (min-width:769px){
+            font-size: 60px;
+        }
+
+        @media scren and (min-width:1024px){
+            font-size: 60px;
+        }
+     }
+
+
+}
