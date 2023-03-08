@@ -59,15 +59,15 @@ contactForm.addEventListener('submit', (event) => {
         errors.textArea = true;
         textAreaError.style.opacity = 1;
     }
-    f (!Object.values(errors).includes(true)) {
+    if (!Object.values(errors).includes(true)) {
         console.log(formData)
-        // alert("Request sent")
+        contactForm.reset();
+
         axios.post("http://212.83.176.255:3030/contact", formData,{
 
         })
             .then(function (response) {
                 console.log(response.data.message);
-                formContact.appendChild(document.createTextNode(response.data.message));
             })
     }
 })
