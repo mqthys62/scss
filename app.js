@@ -1,3 +1,4 @@
+
 const contactForm = document.getElementById('contactForm');
 contactForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -58,11 +59,15 @@ contactForm.addEventListener('submit', (event) => {
         errors.textArea = true;
         textAreaError.style.opacity = 1;
     }
-    if (!Object.values(errors).includes(true)) {
+    f (!Object.values(errors).includes(true)) {
         console.log(formData)
-        document.getElementById('contactForm').reset()
+        // alert("Request sent")
+        axios.post("http://212.83.176.255:3030/contact", formData,{
 
+        })
+            .then(function (response) {
+                console.log(response.data.message);
+                formContact.appendChild(document.createTextNode(response.data.message));
+            })
     }
 })
-
-
