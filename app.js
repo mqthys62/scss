@@ -14,7 +14,7 @@ contactForm.addEventListener('submit', (event) => {
         lastName: lastNameInput.value,
         email: emailInput.value,
         phone: phoneInput.value,
-        textArea: textAreaInput.value,
+        message: textAreaInput.value,
     }
 
     const errors = {
@@ -22,7 +22,7 @@ contactForm.addEventListener('submit', (event) => {
         lastName: false,
         email: false,
         phone: false,
-        textArea: false,
+        message: false,
     }
     const firstNameError = document.getElementById('firstNameError');
     const lastNameError = document.getElementById('lastNameError');
@@ -55,8 +55,8 @@ contactForm.addEventListener('submit', (event) => {
         errors.phone = true;
         phoneError.style.opacity = 1;
     }
-    if (!formData.textArea || !textAreaRegex.test(formData.textArea)) {
-        errors.textArea = true;
+    if (!formData.message || !textAreaRegex.test(formData.message)) {
+        errors.message = true;
         textAreaError.style.opacity = 1;
     }
     if (!Object.values(errors).includes(true)) {
@@ -64,7 +64,6 @@ contactForm.addEventListener('submit', (event) => {
         contactForm.reset();
 
         axios.post("http://212.83.176.255:3030/contact", formData,{
-
         })
             .then(function (response) {
                 console.log(response.data.message);
